@@ -35,8 +35,8 @@ public class CalculadoraAppStepDefinition {
         List<Map<String, String>> dataFeature = dataExcel.asMaps(String.class, String.class);
         Excel excel = new Excel(dataFeature.get(0).get("Ruta Excel"), dataFeature.get(0).get("Pestaña"), true, row);
         data = dataDriverExcel.leerExcel(excel);
-        NICOLAS.can(BrowseTheWeb.with(AppCalculadora.onThePhone().getMyDriver()));
-        //NICOLAS.can(BrowseTheWeb.with(AppCalculadoraSauceLabs.onThePhone().getMyDriver()));
+        //NICOLAS.can(BrowseTheWeb.with(AppCalculadora.onThePhone().getMyDriver()));
+        NICOLAS.can(BrowseTheWeb.with(AppCalculadoraSauceLabs.onThePhone().getMyDriver()));
     }
 
     @When("^realiza operaciones matematicas$")
